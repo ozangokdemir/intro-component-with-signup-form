@@ -1,0 +1,90 @@
+:root{
+    /*COLORS*/
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+
+    --blue: hsl(248, 32%, 49%);
+
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+
+    /*TYPOGRAPHY*/
+    --body-font-size: 16px;
+    --body-font-family: 'Poppins', sans-serif;
+
+    /*LAYOUT SIZES*/
+    --layout-height: 35em;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--red);
+    background-image: url(images/bg-intro-desktop.png);
+}
+
+.l-frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.l-content{
+    height: var(--layout-height);
+    width: 36em;
+    outline: 1px green solid;
+}
+
+.l-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: var(--layout-height);
+    width: 34em;
+    outline: 1px red solid;
+}
+
+.l-form-field{
+    width: inherit;
+    border-radius: 10px;
+}
+
+.btn-trial{
+    height: 3.8em;
+
+    background: var(--blue);
+
+    text-align: center;
+}
+
+.l-form-signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    height: 29.8em;
+
+    background: white;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+  
