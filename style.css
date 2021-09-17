@@ -77,13 +77,26 @@ body{
 .l-form-signup{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
 
     height: 29.8em;
 
     background: white;
 }
+
+.field{
+	height: 3em;
+	width: 30em;
+	
+	margin-bottom: 2em;
+	
+	border-color: var(--greyish-blue);
+	border-radius: 10px;
+	
+	outline: none;
+}
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

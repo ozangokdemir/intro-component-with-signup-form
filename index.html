@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   
   <title>Frontend Mentor | Intro component with sign up form</title>
 
@@ -30,14 +29,14 @@
 
     <section class="l-form">
       <a href="#" class="l-form-field btn-trial"><em>Try it free 7 days</em> then $20/mo. thereafter</a>
-      <div class="l-form-field l-form-signup">
-        <a class="field field-first-name">First Name</a>
-        <a class="field field-last-name">Last Name</a>
-        <a class="field field-email">Email Address</a>
-        <a class="field field-password">Password</a>
-        <a href="#" class="btn-claim-trial">Claim your free trial </a>
+      <form class="l-form-field l-form-signup">
+        <input class="field field-first-name" placeholder="First Name" required></input>
+        <input class="field field-last-name" placeholder="Last Name" required></input>
+        <input class="field field-email" type="email" placeholder="Email Address" required></input>
+        <input class="field field-password" type="password" placeholder="Password" required></input>
+        <input href="#" class="btn-claim-trial" type="submit" value="Claim your free trial"></input>
         <p class="terms">By clicking the button, you are agreeing to our <a href="#" class="link-terms">Terms and Services</a></p>
-      </div>
+      </form>
     </section>
 
   </main>
