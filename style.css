@@ -10,7 +10,7 @@
 
     /*TYPOGRAPHY*/
     --body-font-size: 16px;
-    --body-font-family: 'Poppins', sans-serif;
+    --body-font-family: 'Poppins', sans-serif; /* 400 to 700 */
 
     /*LAYOUT SIZES*/
     --layout-height: 35em;
@@ -28,12 +28,22 @@
     border: 0;
 }
 
+/* GLOBAL */
+
+a, em{
+    font-style: normal;
+    text-decoration: none;
+}
+
 body{
     margin: 0;
     padding: 0;
 
     background-color: var(--red);
     background-image: url(images/bg-intro-desktop.png);
+
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
 }
 
 .l-frame{
@@ -45,9 +55,25 @@ body{
 }
 
 .l-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     height: var(--layout-height);
     width: 36em;
-    outline: 1px green solid;
+    /* outline: 1px green solid; */
+
+    padding-right: 5em;
+    box-sizing: border-box; /* No deformation while adding padding */
+
+    color: white;
+}
+
+.main-title{
+    margin: .5em 0 .5em 0;
+    font-size: 3em;
+    font-weight: 600;
+    line-height: 1em;
 }
 
 .l-form{
@@ -58,20 +84,26 @@ body{
     
     height: var(--layout-height);
     width: 34em;
-    outline: 1px red solid;
+    /* outline: 1px red solid; */
 }
 
 .l-form-field{
     width: inherit;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 7px rgba(0, 0, 0, .15);
 }
 
 .btn-trial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     height: 3.8em;
 
     background: var(--blue);
+    color: white;
 
-    text-align: center;
+    font-weight: 700;
 }
 
 .l-form-signup{
@@ -80,23 +112,51 @@ body{
     justify-content: flex-start;
     align-items: center;
 
-    height: 29.8em;
+    height: 29.7em;
 
     background: white;
 }
 
 .field{
-	height: 3em;
-	width: 30em;
+	height: 56px; /* 4.3em ou 56px */
+	width: 460px; /* 34.8em ou 460px */
+    /* Allows submit type input being same width as other inputs */
+    box-sizing: border-box;
 	
-	margin-bottom: 2em;
+	margin-bottom: 20px; /* 1.4em ou 20px */
 	
-	border-color: var(--greyish-blue);
-	border-radius: 10px;
-	
-	outline: none;
+    border: 1px solid var(--grayish-blue);
+	border-radius: 5px;
 }
 
+.field:first-child{
+    margin-top: 3em;
+}
+
+.field::placeholder{
+    padding-left: 2em;
+
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.btn-claim-trial{
+    padding-top: 6px;
+
+    background: var(--green);
+    color: white;
+
+    font-size: .9em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.terms{
+    margin-top: -5px;
+
+    font-size: .7em;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
