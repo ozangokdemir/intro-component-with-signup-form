@@ -1,0 +1,3 @@
+Where is the best placement for script ?
+Is it better to verify inputs with HTML or JS ?
+How can we verify HTML input verification with JS without overwriting a verification is JS ? (like an ".areThisInputAreaCriteriaRespected"?)
