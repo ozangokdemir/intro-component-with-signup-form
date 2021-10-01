@@ -83,7 +83,7 @@ input, select, textarea, button {font-family: inherit;}
     justify-content: space-between;
     align-items: center;
     
-    height: var(--layout-height);
+    min-height: var(--layout-height);
     width: 34em;
     /* outline: 1px red solid; */
 }
@@ -115,7 +115,7 @@ input, select, textarea, button {font-family: inherit;}
     justify-content: flex-start;
     align-items: center;
 
-    height: 29.7em;
+    /* height: 29.7em; */
 
     background: white;
 }
@@ -140,6 +140,8 @@ input, select, textarea, button {font-family: inherit;}
 
 .field:first-child{ margin-top: 2.8em; }
 
+.field:not(:last-of-type):focus{outline: 2px solid var(--grayish-blue);}
+
 .btn-claim-trial{
     padding: 2px 0 0 0;
 
@@ -157,10 +159,11 @@ input, select, textarea, button {font-family: inherit;}
 
 .btn-claim-trial:hover{
     cursor: pointer;
+    opacity: .6;
 }
 
 .terms{ 
-    margin-top: -5px;
+    margin: -5px 0 40px 0;
 
     color: var(--grayish-blue);
     font-size: .65em;

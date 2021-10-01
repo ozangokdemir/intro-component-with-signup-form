@@ -10,14 +10,14 @@ document
         console.log('Taille : ', elt.length);
         for (let i=0; i<elt.length; i++) {
             if (elt[i].value == '') {
-                elt[i]
-                    .style.borderColor = "hsl(0, 100%, 74%)";
-                    .
+                elt[i].style.border = '2px solid hsl(0, 100%, 74%)';
+                elt[i].style.background = 'url("images/icon-error.svg") no-repeat 95%';
+                elt[i].after(document.createElement('p'));
+            }
+            else {
+                elt[i].removeAttribute('style');
             }
         }
-
-        // if (document.querySelector('.field:not(:last-of-type)') == '') {
-        //     console.log('oh yeah');
-        // }
-        // console.log(document.querySelectorAll('.field:not(:last-of-type)').length);
     });
+
+// document.getElementById('first-name').appendChild(document.createElement("p"));
