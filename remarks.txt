@@ -1,0 +1,9 @@
+problem : when adding a p element underneath form inputs on the layout, the signup form gets extended vertically, causing trial btn to stick to it instead of keeping a fixed distance from it.
+solution :
+- form flex behaviour changed from space-between to center
+- added a margin-bottom to trial button
+
+problem : p element is added after the margin of each input element, which is too far from the position needed
+solution :
+- replace bottom margins with top margins
+- adjust first and last input elements margin
