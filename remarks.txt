@@ -7,3 +7,8 @@ problem : p element is added after the margin of each input element, which is to
 solution :
 - replace bottom margins with top margins
 - adjust first and last input elements margin
+
+problem : adding an element with after doesn't allow to change its position.
+solution :
+- created a span under each input in html. It stays empty until an error is detected.
+STILL DOESN'T THINK IT'S THE BEST SOLUTION

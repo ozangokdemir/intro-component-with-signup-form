@@ -7,28 +7,37 @@ document
     .getElementById('claim')
     .addEventListener('click', function() {
         const elt =  document.querySelectorAll('.field:not(:last-of-type)');
-        console.log('Premier élement : ', elt[1].firstElementChild);
+        console.log('Element ciblé :', elt[1].nodeName);
         for (let i=0; i<elt.length; i++) {
+
+            // IF INPUT ELEMENT IS EMPTY
             if (elt[i].value == '') {
-                elt[i].style.outline = '2px solid hsl(0, 100%, 74%)';
+                elt[i].style.border = '2px solid hsl(0, 100%, 74%)';
+                elt[i].style.border.radius = '20px';
                 elt[i].style.background = 'url("images/icon-error.svg") no-repeat 95%';
 
-                /* if (elt[i].firstElementChild) {
-                    elt[i].after(document
-                        .createElement('p')
-                        .appendChild(document.createTextNode(elt[i].getAttribute('placeholder') + ' cannot be empty')
-                    ));
-                } */
+                // IF THERE'S NO LABEL UNDER THE INPUT
+                if (elt[i].nextElementSibling.tagName == 'INPUT') {
+                    let inputLabel = document.createElement('div');
+                    inputLabel.innerHTML = elt[i].getAttribute('placeholder') + ' cannot be empty';
+                    inputLabel.style.cssText = `
+                        right: 0px;
+                        font-size: 12px;
+                        font-style: italic;
+                        color: var(--red);
+                    `;
+                    elt[i].after(inputLabel);
+                }
 
-                elt[i].appendChild(document.createElement('p'));
-
-                        
             }
+            
+            // IF THERE'S A LABEL UNDER THE INPUT
             else {
                 elt[i].removeAttribute('style');
-                elt[i].removeChild(document.querySelector('.field p'));
+                if (elt[i].nextElementSibling.tagName != 'INPUT') {
+                    elt[i].nextElementSibling.remove();
+                }
             }
+
         }
     });
-
-// document.getElementById('first-name').appendChild(document.createElement("p"));
