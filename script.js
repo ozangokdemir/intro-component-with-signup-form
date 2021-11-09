@@ -18,10 +18,25 @@ document
 
                 // IF THERE'S NO LABEL UNDER THE INPUT
                 if (elt[i].nextElementSibling.tagName == 'INPUT') {
+
+                    // CREATING ELEMENT CONTAINING THE ERROR MSG
                     let inputLabel = document.createElement('div');
-                    inputLabel.innerHTML = elt[i].getAttribute('placeholder') + ' cannot be empty';
+
+                    // HANDLE EMAIL FORM SPECIAL ERROR MSG
+                    if (i == 2){
+                        inputLabel.innerHTML = 'Looks like this is not an email';
+                        elt[i].setAttribute('placeholder', 'email@example/com');
+                        elt[i].classList.add('error');
+                    }
+                    // ALL OTHER CASES
+                    else{
+                        inputLabel.innerHTML = elt[i].getAttribute('placeholder') + ' cannot be empty';
+                        elt[i].removeAttribute('placeholder');
+                    }
+
                     inputLabel.style.cssText = `
-                        right: 0px;
+                        align-self: flex-end;
+                        margin: .8em 4em 0 0;
                         font-size: 12px;
                         font-style: italic;
                         color: var(--red);

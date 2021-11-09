@@ -143,6 +143,11 @@ input, select, textarea, button {font-family: inherit;}
 
 .field:not(:last-of-type):focus{outline: 2px solid var(--grayish-blue);}
 
+/* to change the color of email error placeholder by adding it a new class called error*/
+.error::placeholder{
+    color: var(--red);
+}
+
 .btn-claim-trial{
     margin-bottom: 20px;
     padding-top: 2px;
