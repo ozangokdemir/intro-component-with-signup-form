@@ -34,6 +34,7 @@ document
                         elt[i].removeAttribute('placeholder');
                     }
 
+                    // RESTYLING ERROR LABELS AND ADDING THEM AFTER EACH INPUT
                     inputLabel.style.cssText = `
                         align-self: flex-end;
                         margin: .8em 4em 0 0;

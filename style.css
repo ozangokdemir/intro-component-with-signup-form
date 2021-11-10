@@ -184,4 +184,60 @@ input, select, textarea, button {font-family: inherit;}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
-  
+
+
+/* RESPONSIVE */
+@media (max-width: 1140px) {
+    .l-frame{
+        flex-direction: column;
+    }
+
+    .l-content{
+        height: 20em;
+        padding: 0
+    }
+
+    .l-content > *{
+        text-justify: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .l-content, .l-form{
+        width: 87%;
+    }
+
+    .l-form-field{
+        width: 100%;
+    }
+
+    .field, .terms{
+        width: 85%;
+    }
+
+    .main-title{
+        font-size: 2em;
+    }
+
+    .btn-trial{
+        display: inline;
+        text-align: center;
+        box-sizing: border-box;
+
+        height: 6em;
+
+        padding: 1.5em 4em 0 4em;
+    }
+
+    .btn-claim-trial{
+        padding: 0;
+    }
+
+    .terms{
+        text-align: center;
+        line-height: 2em;
+    }
+
+}

@@ -12,3 +12,8 @@ problem : adding an element with after doesn't allow to change its position.
 solution :
 - created a span under each input in html. It stays empty until an error is detected.
 STILL DOESN'T THINK IT'S THE BEST SOLUTION
+
+problem : using flexbox when there's an inline element in a block element (<em> in <a> for example) to center text in the button
+solution :
+- used old methods to center the text. Transformation method not usable, so I played with padding.
+STILL NOT HAPPY WITH THE RESULT
