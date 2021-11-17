@@ -29,12 +29,19 @@
 
     <section class="l-form">
       <a href="#" class="l-form-field btn-trial"><em>Try it free 7 days</em>then $20/mo. thereafter</a>
+      
       <form class="l-form-field l-form-signup">
         <input class="field field-first-name" id="first-name" placeholder="First Name" required>
+            <small class="msg-error">First Name cannot be empty</small>
         <input class="field field-last-name" id="last-name" placeholder="Last Name" required>
+            <small class="msg-error">Last name cannot be empty</small>
         <input class="field field-email" id="email" type="email" placeholder="Email Address" required>
+            <small class="msg-error">Looks like this is not an email</small>
         <input class="field field-password" id="pwd" type="password" placeholder="Password" required>
-        <input href="#" class="field btn-claim-trial" id="claim" type="submit" value="Claim your free trial">
+            <small class="msg-error">Password cannot be empty</small>
+        <!-- <input href="#" class="field btn-claim-trial" id="claim" type="submit" value="Claim your free trial"> -->
+        <button href="#" class="field btn-claim-trial" id="claim" type="submit">Claim your free trial</button>
+
         <p class="terms">By clicking the button, you are agreeing to our <a href="#" class="link-terms">Terms and Services</a></p>
       </form>
     </section>

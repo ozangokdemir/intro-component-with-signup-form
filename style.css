@@ -141,11 +141,34 @@ input, select, textarea, button {font-family: inherit;}
 
 .field:first-child{ margin-top: 40px; }
 
-.field:not(:last-of-type):focus{outline: 2px solid var(--grayish-blue);}
+.field:not(.btn-claim-trial):focus{outline: 2px solid var(--grayish-blue);}
 
-/* to change the color of email error placeholder by adding it a new class called error*/
-.error::placeholder{
+/* class to add to change fields border to red */
+.field-error{
+    border: 2px solid var(--red);
+    background: url("images/icon-error.svg") no-repeat 95%;
+}
+
+/* to change the color of email error placeholder by adding it a new class called red-placeholder*/
+.red-placeholder::placeholder{
     color: var(--red);
+}
+
+/* hiding error message and deleting the space it takes */
+.msg-error{
+    display: none;
+    visibility: hidden;
+
+    align-self: flex-end;
+    margin: .5em 3.8em 0 0;
+
+    color: var(--red);
+    font-style: italic;
+    font-size: .8em;
+}
+
+.icon-error{
+    position: relative;
 }
 
 .btn-claim-trial{
@@ -185,3 +208,59 @@ input, select, textarea, button {font-family: inherit;}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
   
+
+/* RESPONSIVE */
+@media (max-width: 1140px) {
+    .l-frame{
+        flex-direction: column;
+    }
+
+    .l-content{
+        height: 20em;
+        padding: 0
+    }
+
+    .l-content > *{
+        text-justify: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .l-content, .l-form{
+        width: 87%;
+    }
+
+    .l-form-field{
+        width: 100%;
+    }
+
+    .field, .terms{
+        width: 85%;
+    }
+
+    .main-title{
+        font-size: 2em;
+    }
+
+    .btn-trial{
+        display: inline;
+        text-align: center;
+        box-sizing: border-box;
+
+        height: 6em;
+
+        padding: 1.5em 4em 0 4em;
+    }
+
+    .btn-claim-trial{
+        padding: 0;
+    }
+
+    .terms{
+        text-align: center;
+        line-height: 2em;
+    }
+
+}
