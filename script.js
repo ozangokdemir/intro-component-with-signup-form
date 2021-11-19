@@ -11,38 +11,31 @@ submitButton.addEventListener('click', function(e) {
 });
 
 function checkInputs(){
+
+    const fields =  document.querySelectorAll('.field:not(.btn-claim-trial)');
     
-    // FIRST NAMES
-    if(!isName(firstName.value)) {
-        setError(firstName);
-    }
-    else {
-        unsetError(firstName);
+    for (let i=0; i<fields.length; i++) {
+
+        /* IN CASE OF EMAIL FIELD */
+        if (fields[i].id == 'email') {
+            if(!isEmail(emailAddress.value)) {
+                setError(emailAddress);
+            }
+            else {
+                unsetError(emailAddress);
+            }
+        }
+
+        /* OTHER SIMPLE CASES */
+        else if (fields[i].value == '') {
+            setError(fields[i]);
+        }
+
+        else {
+            unsetError(fields[i]);
+        }
     }
 
-    // LAST NAMES
-    if(!isName(lastName.value)) {
-        setError(lastName);
-    }
-    else {
-        unsetError(lastName);
-    }
-
-    // EMAIL
-    if(!isEmail(emailAddress.value)) {
-        setError(emailAddress);
-    }
-    else {
-        unsetError(emailAddress);
-    }
-
-    // PASSWORD
-    if(password.value === '') {
-        setError(password);
-    }
-    else {
-        unsetError(password);
-    }
 }
 
 
@@ -69,20 +62,7 @@ function unsetError(element){
     element.nextElementSibling.style.visibility = 'hidden';
 }
 
-
-// VERIFYING NAMES (ALPHANUMERICAL)
-function isName(name) {
-    return /^[a-z ,.'-]+$/i.test(name);
-}
-
 // VERIFYING THE EMAIL (EMAILREGEX.COM)
 function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
-
-/* NOT USED HERE
-// PASSWORD VERIFICATION (Simple : minimum 8 characters, at least 1 letter and 1 number)
-function isPassword(pwd) {
-    return /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(pwd);
-}
-*/

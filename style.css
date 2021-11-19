@@ -13,7 +13,7 @@
     --body-font-family: 'Poppins', sans-serif; /* 400 to 700 */
 
     /*LAYOUT SIZES*/
-    --layout-height: 35em;
+    --layout-height: 475px;
 }
 
 .sr-only {
@@ -60,7 +60,6 @@ input, select, textarea, button {font-family: inherit;}
 
     height: var(--layout-height);
     width: 36em;
-    /* outline: 1px green solid; */
 
     padding: 0 4em 0 .5em;
     box-sizing: border-box; /* No deformation while adding padding */
@@ -84,7 +83,7 @@ input, select, textarea, button {font-family: inherit;}
     align-items: center;
     
     min-height: var(--layout-height);
-    width: 34em;
+    width: 540px;
 }
 
 .l-form-field{
@@ -100,7 +99,7 @@ input, select, textarea, button {font-family: inherit;}
 
     margin-bottom: 25px; /* TO ADJUST CORRECTLY */
 
-    height: 3.8em;
+    height: 60px;
 
     background: var(--blue);
     color: rgba(255, 255, 255, .9);
@@ -116,18 +115,17 @@ input, select, textarea, button {font-family: inherit;}
     justify-content: flex-start;
     align-items: center;
 
-    /* height: 29.7em; */
-
     background: white;
 }
 
 .field{
-	height: 56px; /* 4.3em ou 56px */
-	width: 460px; /* 34.8em ou 460px */
+	height: 56px;
+	width: 460px;
+
     /* Allows submit type input being same width as other inputs */
     box-sizing: border-box;
 	
-	margin-top: 20px; /* 1.4em ou 20px */
+	margin-top: 20px;
     padding-left: 2em;
 	
     border: 1px solid var(--grayish-blue);
@@ -146,7 +144,7 @@ input, select, textarea, button {font-family: inherit;}
 /* class to add to change fields border to red */
 .field-error{
     border: 2px solid var(--red);
-    background: url("images/icon-error.svg") no-repeat 95%;
+    background: url("images/icon-error.svg") no-repeat 94%;
 }
 
 /* to change the color of email error placeholder by adding it a new class called red-placeholder*/
@@ -164,7 +162,7 @@ input, select, textarea, button {font-family: inherit;}
 
     color: var(--red);
     font-style: italic;
-    font-size: .8em;
+    font-size: .7em;
 }
 
 .icon-error{
@@ -206,7 +204,7 @@ input, select, textarea, button {font-family: inherit;}
 }
 
 .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: var(--grayish-blue); }
   
 
 /* RESPONSIVE */
